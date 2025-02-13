@@ -12,6 +12,14 @@ jobs:
   trigger-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Display Inputs
+        run: |
+           echo "Hello Test1"
+           echo "Hello Test2"
+
       - name: Trigger workflow in another repository
         env:
           TOK: ${{ secrets.TEST_PAT }}

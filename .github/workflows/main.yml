@@ -1,9 +1,12 @@
 name: Trigger External Workflow
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - main
+      - '*'
+      
+run-name: ${{ github.actor }} is testing out GitHub Actions  🚀
 
 jobs:
   trigger-workflow:
